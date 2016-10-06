@@ -1,0 +1,5 @@
+<% li_id_uiid = "<li id='#{post.id}'>".html_safe %>
+<% ul_id_ulid = "<ul id='ul#{post.id}'>".html_safe %>
+<%= li_id_uiid %>💬 <span class="post">Re:#<%= post.parent %> | #<%= post.id %> | <%= post.writer %>「<%= post.comment %>」　
+[ <%= link_to '✎ Edit ', edit_post_path(post), remote: true %> | <%= link_to '➕ Reply ✍', reply_post_path(post), remote: true %> ]
+</span><%= ul_id_ulid %></ul></li>

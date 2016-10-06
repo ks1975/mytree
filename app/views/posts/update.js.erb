@@ -1,0 +1,7 @@
+
+var save_html = $("#ul<%= @post.id %>").html();
+
+$("li#<%= @post.id %>").replaceWith("<%= j (render @post) %>");
+
+$("#ul<%= @post.id %>").append(save_html);
+

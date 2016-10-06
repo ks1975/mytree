@@ -1,0 +1,12 @@
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#reload").click();
+  });
+</script>
+<p id="notice"><%= notice %></p>
+
+<h1>Posts Tree</h1>
+<ul class="tree"><li id="0">💬 #0:Root [ <%= link_to '➕ New ✍', new_post_path, remote: true %> | <%= link_to 'Reload All 🔄', posts_path+"", { remote: true, id: "reload" } %> ] </li>
+<ul id="ul0">
+</ul>
+</ul>

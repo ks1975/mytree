@@ -1,0 +1,10 @@
+
+if ($("form#edit_post_<%= @post.id %>").length == 0) {
+} else {
+  $("form#edit_post_<%= @post.id %>").remove();
+};
+if ($("form#new_post_<%= @post.id %>").length == 0) {
+　$("<li><%= j (render 'form', post: @post) %></li>").appendTo("#ul<%= @post.id %>");
+} else {
+  $("form#new_post_<%= @post.id %>").parent().remove();
+}

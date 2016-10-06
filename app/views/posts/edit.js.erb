@@ -1,0 +1,9 @@
+if ($("form#edit_post_<%= @post.id %>").length == 0) {
+　$("<%= j (render 'form', post: @post, data: {remote: true}) %>").insertBefore("#ul<%= @post.id %>");
+} else {
+  $("form#edit_post_<%= @post.id %>").remove();
+}
+if ($("form#new_post_<%= @post.id %>").length == 0) {
+} else {
+  $("form#new_post_<%= @post.id %>").parent().remove();
+};

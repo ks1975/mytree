@@ -1,0 +1,4 @@
+
+$("form.edit_post").remove();
+$("form.new_post").parent().remove();
+$("<%= j (render @post) %>").appendTo("#ul<%= @post.parent %>");

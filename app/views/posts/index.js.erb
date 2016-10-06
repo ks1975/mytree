@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+<% li_id = "li##{post.id}" ;ul_id = "#ul#{post.parent}" %>
+$("<%= li_id %>").remove();
+$("<%= ul_id %>").append("<%= j (render post) %>");
+//$("<%= ul_id %>").append("<%= j (render post) %>");
+<% end %>
